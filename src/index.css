@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+header ul li{
+  @apply px-4;
+}
+header{
+  /* background-color: #e84118 !important; */
+}
+header #name{
+  color: #333333;
+  /* padding-top: 2px !important; */
+  font-size: 19px !important;
+}
+.mobile-nav {
+  @apply  fixed top-16 w-full h-96 left-0 p-2 text-center m-auto cursor-pointer;
+  background-color: #333333;
+} 
+.mobile-nav  li{
+  @apply w-full h-full text-center pt-3;
+}
+.mobile-nav li:hover{
+  background-color: rgba(255,255,255,0.1);
+}
+.lap-view li{
+  @apply relative;
+}
+.lap-view li::after{
+     content:"";
+     /* @apply absolute left-0 h-4 w-3;
+     bottom: -5px; */
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      background-color: rgb(255,255,255,0.5);
+      transition-timing-function: ease-in-out;
+      transform: scaleX(0);
+      transition: 0.6s;
+      
+}
+.lap-view :hover::after{
+  transform: scaleX(1);
+  transition: 0.6s;
+}
+.bg{
+  background-color: #ff4757; 
+}
+.small{
+  width:500px;
+  height: 500px;
+  object-fit: contain;
+}
+.project-desc{
+  @apply absolute top-0 leading-loose left-0 bottom-0  text-2xl bg-[rgb(255,107,129)] text-white px-4 py-36 text-center opacity-0 duration-500 hover:opacity-100 cursor-pointer;
+}
+/* .project-desc1{
+  @apply absolute top-0 leading-loose left-0 bottom-0  text-2xl bg-[rgb(255,107,129)] text-white px-4 py-10 text-center opacity-0 duration-500 hover:opacity-100 cursor-pointer md:py-28;
+} */
+.card{
+  box-shadow: 0 15px 20px 0 rgba(0,0,0,0.2),
+  0 15px 20px 0 rgba(0,0,0,0.2),0 15px 20px 0 rgba(0,0,0,0.2) ;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+/* Calculator */
+.calc{
+  box-shadow:inset
+  5px 5px 12px rgba(0,0,0,0.16),
+  inset 5px 10px 20px rgba(0,0,0,0.20),
+  5px 10px 20px rgba(0,0,0,0.20),
+  5px 9px 50px rgba(0,0,0,0.16) inset;
+}
+.inputs
+{
+  box-shadow: inset 
+   5px 5px 12px rgba(0,0,0,0.20) ,
+   inset 
+   5px 5px 12px rgba(0,0,0,0.20), inset 
+   5px 5px 12px rgba(0,0,0,0.20),
+   inset 
+   5px 5px 12px rgba(0,0,0,0.20),
+   inset 
+   5px 10px 20px rgba(0,0,0,0.20)!important;
+}
+.inputs::placeholder{
+  @apply text-gray-600;
+}
+button{
+  box-shadow:
+  5px 5px 12px rgba(0,0,0,0.16),
+  5px 5px 12px rgba(0,0,0,0.20),
+  5px 5px 12px rgba(0,0,0,0.20),
+  5px 5px 12px rgba(0,0,0,0.20) inset;
+  height: 70px;
+  @apply rounded-full font-portfolio-font h-20 w-20 text-2xl;
+}
